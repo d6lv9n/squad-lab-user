@@ -19,7 +19,13 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    // 'allowed_origins' => ['*'],
+    'allowed_origins' => [ // Front service
+        // '*',
+        'http://localhost:5173', // Local Front service
+        'http://localhost:7000', // Local Board service
+        'https://squad-lab.vercel.app'
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -29,6 +35,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true, // false
 
 ];
